@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Demo Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Demo Shop</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to My Online Store</h2>
+    <p>Shop the latest products at the best prices</p>
+    <button>Shop Now</button>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Product">
+        <h3>Cool Shoes</h3>
+        <p>$49.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Product">
+        <h3>Smart Watch</h3>
+        <p>$99.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200" alt="Product">
+        <h3>Headphones</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Demo Shop. All rights reserved.</p>
+  </footer>
+</body>
+</html>
