@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - MegaMart Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>MegaMart Online</h1>
     <nav>
@@ -16,24 +18,26 @@
     </nav>
   </header>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: support@megamart.com</p>
-    <p>Phone: +123 456 7890</p>
-    <p>Address: 123 Market Street, City, Country</p>
+    <p>We’d love to hear from you!</p>
+    <ul>
+      <li>Email: support@megamart.com</li>
+      <li>Phone: +123 456 7890</li>
+      <li>Address: 123 MegaMart Ave, Shopping City</li>
+    </ul>
+    <form>
+      <input type="text" placeholder="Your Name" required><br><br>
+      <input type="email" placeholder="Your Email" required><br><br>
+      <textarea placeholder="Your Message" required></textarea><br><br>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 MegaMart Online. All rights reserved.</p>
-    <p>Cart: <span id="cart-count">0</span> items</p>
   </footer>
-
-  <script>
-    let count = 0;
-    function addToCart() {
-      count++;
-      document.getElementById('cart-count').innerText = count;
-    }
-  </script>
 </body>
 </html>

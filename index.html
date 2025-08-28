@@ -4,68 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MegaMart Online</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>MegaMart Online</h1>
     <nav>
       <a href="#hero">Home</a>
-      <a href="shop.html">Shop</a>
+      <a href="#products">Shop</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero" id="hero">
-    <div class="hero-content">
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <img src="https://via.placeholder.com/1600x400?text=MegaMart+Banner" alt="MegaMart Banner" class="hero-img">
+    <div class="hero-text">
       <h1>Welcome to MegaMart!</h1>
-      <p>Your one-stop shop for the best deals.</p>
-      <a href="shop.html" class="btn">Shop Now</a>
+      <p>Shop the best products at amazing prices</p>
+      <a href="#products" class="btn">Shop Now</a>
     </div>
   </section>
 
+  <!-- Products Section -->
   <section id="products">
-    <h2>Featured Products</h2>
+    <h2>Our Products</h2>
     <div class="product-grid">
-      <div class="product-card">
+      <div class="product">
         <img src="https://via.placeholder.com/300x300?text=Cool+Shoes" alt="Cool Shoes">
-        <div class="product-info">
-          <h3>Cool Shoes</h3>
-          <p>$49.99</p>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
+        <h3>Cool Shoes</h3>
+        <p>$49.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
       </div>
-      <div class="product-card">
+      <div class="product">
         <img src="https://via.placeholder.com/300x300?text=Smart+Watch" alt="Smart Watch">
-        <div class="product-info">
-          <h3>Smart Watch</h3>
-          <p>$99.99</p>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
+        <h3>Smart Watch</h3>
+        <p>$99.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
       </div>
-      <div class="product-card">
+      <div class="product">
         <img src="https://via.placeholder.com/300x300?text=Headphones" alt="Headphones">
-        <div class="product-info">
-          <h3>Headphones</h3>
-          <p>$29.99</p>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
+        <h3>Headphones</h3>
+        <p>$29.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Fancy+Jacket" alt="Fancy Jacket">
+        <h3>Fancy Jacket</h3>
+        <p>$79.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
       </div>
     </div>
+    <p>Cart: <span id="cart-count">0</span> items</p>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: support@megamart.com</p>
     <p>Phone: +123 456 7890</p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 MegaMart Online. All rights reserved.</p>
-    <p>Cart: <span id="cart-count">0</span> items</p>
   </footer>
 
+  <!-- JavaScript -->
   <script>
     let count = 0;
     function addToCart() {

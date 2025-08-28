@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop - MegaMart Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>MegaMart Online</h1>
     <nav>
@@ -16,31 +18,53 @@
     </nav>
   </header>
 
+  <!-- Shop Section -->
   <section id="products">
-    <h2>All Products</h2>
+    <h2>Shop Our Products</h2>
     <div class="product-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x300?text=Fancy+Jacket" alt="Fancy Jacket">
-        <div class="product-info">
-          <h3>Fancy Jacket</h3>
-          <p>$79.99</p>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Cool+Shoes" alt="Cool Shoes">
+        <h3>Cool Shoes</h3>
+        <p>$49.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
       </div>
-      <div class="product-card">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Smart+Watch" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>$99.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Headphones" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>$29.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Fancy+Jacket" alt="Fancy Jacket">
+        <h3>Fancy Jacket</h3>
+        <p>$79.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
         <img src="https://via.placeholder.com/300x300?text=Backpack" alt="Backpack">
-        <div class="product-info">
-          <h3>Backpack</h3>
-          <p>$39.99</p>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
+        <h3>Backpack</h3>
+        <p>$39.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x300?text=Headphones+Pro" alt="Headphones Pro">
+        <h3>Headphones Pro</h3>
+        <p>$129.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
       </div>
     </div>
+    <p>Cart: <span id="cart-count">0</span> items</p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 MegaMart Online. All rights reserved.</p>
-    <p>Cart: <span id="cart-count">0</span> items</p>
   </footer>
 
   <script>
