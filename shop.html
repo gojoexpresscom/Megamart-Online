@@ -3,72 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MegaMart Online - Shop</title>
+  <title>Shop - MegaMart Online</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<header>
-  <div class="logo-nav">
-    <img src="https://via.placeholder.com/150x60?text=MegaMart" alt="MegaMart Logo" class="logo">
+  <header>
+    <h1>MegaMart Online</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </div>
-  <p class="cart">Cart: <span id="cart-count">0</span> items</p>
-</header>
+  </header>
 
-<section class="products">
-  <h2>Shop Our Products</h2>
-  <div class="product-grid">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1600180758895-1b0628f9e7de?auto=format&fit=crop&w=250&q=80" alt="Cool Shoes">
-      <h3>Cool Shoes</h3>
-      <p>$49.99</p>
-      <button onclick="addToCart()">Add to Cart</button>
+  <section id="products">
+    <h2>All Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x300?text=Fancy+Jacket" alt="Fancy Jacket">
+        <div class="product-info">
+          <h3>Fancy Jacket</h3>
+          <p>$79.99</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x300?text=Backpack" alt="Backpack">
+        <div class="product-info">
+          <h3>Backpack</h3>
+          <p>$39.99</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
     </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=250&q=80" alt="Smart Watch">
-      <h3>Smart Watch</h3>
-      <p>$99.99</p>
-      <button onclick="addToCart()">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1580894732444-df7f6f2e3b30?auto=format&fit=crop&w=250&q=80" alt="Headphones">
-      <h3>Headphones</h3>
-      <p>$29.99</p>
-      <button onclick="addToCart()">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=250&q=80" alt="Fancy Jacket">
-      <h3>Fancy Jacket</h3>
-      <p>$79.99</p>
-      <button onclick="addToCart()">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1616628186189-d3f7db78a271?auto=format&fit=crop&w=250&q=80" alt="Backpack">
-      <h3>Backpack</h3>
-      <p>$39.99</p>
-      <button onclick="addToCart()">Add to Cart</button>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2025 MegaMart Online. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>© 2025 MegaMart Online. All rights reserved.</p>
+    <p>Cart: <span id="cart-count">0</span> items</p>
+  </footer>
 
-<script>
-let count = 0;
-function addToCart() {
-  count++;
-  document.getElementById('cart-count').innerText = count;
-  alert("Item added to cart! Total items: " + count);
-}
-</script>
-
+  <script>
+    let count = 0;
+    function addToCart() {
+      count++;
+      document.getElementById('cart-count').innerText = count;
+    }
+  </script>
 </body>
 </html>

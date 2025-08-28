@@ -3,49 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MegaMart Online - Contact</title>
+  <title>Contact - MegaMart Online</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<header>
-  <div class="logo-nav">
-    <img src="https://via.placeholder.com/150x60?text=MegaMart" alt="MegaMart Logo" class="logo">
+  <header>
+    <h1>MegaMart Online</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </div>
-  <p class="cart">Cart: <span id="cart-count">0</span> items</p>
-</header>
+  </header>
 
-<section class="contact">
-  <h2>Contact Us</h2>
-  <p>Email: support@megamart.com</p>
-  <p>Phone: +123 456 7890</p>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@megamart.com</p>
+    <p>Phone: +123 456 7890</p>
+    <p>Address: 123 Market Street, City, Country</p>
+  </section>
 
-  <form>
-    <input type="text" placeholder="Your Name" required><br><br>
-    <input type="email" placeholder="Your Email" required><br><br>
-    <textarea placeholder="Your Message" required></textarea><br><br>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <footer>
+    <p>© 2025 MegaMart Online. All rights reserved.</p>
+    <p>Cart: <span id="cart-count">0</span> items</p>
+  </footer>
 
-<footer>
-  <p>© 2025 MegaMart Online. All rights reserved.</p>
-</footer>
-
-<script>
-let count = 0;
-function addToCart() {
-  count++;
-  document.getElementById('cart-count').innerText = count;
-  alert("Item added to cart! Total items: " + count);
-}
-</script>
-
+  <script>
+    let count = 0;
+    function addToCart() {
+      count++;
+      document.getElementById('cart-count').innerText = count;
+    }
+  </script>
 </body>
 </html>
