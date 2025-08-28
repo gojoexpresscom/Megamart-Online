@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MegaMart Online - Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">MegaMart</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Shop Products -->
+  <section class="shop">
+    <h1>Our Products</h1>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/250x250" alt="Cool Shoes">
+        <h3>Cool Shoes</h3>
+        <p>$49.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x250" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x250" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>$29.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x250" alt="Fancy Jacket">
+        <h3>Fancy Jacket</h3>
+        <p>$79.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x250" alt="Backpack">
+        <h3>Backpack</h3>
+        <p>$39.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MegaMart Online. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript Cart -->
+  <p class="cart-counter">Cart: <span id="cart-count">0</span> items</p>
+  <script>
+    let count = 0;
+    const buttons = document.querySelectorAll('.add-to-cart');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        count++;
+        document.getElementById('cart-count').innerText = count;
+        alert('Item added to cart!');
+      });
+    });
+  </script>
+</body>
+</html>
