@@ -1,43 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - MegaMart Online</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MegaMart — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>MegaMart Online</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">M</span>egaMart</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="cart-btn" id="cart-open-3">Cart (<span id="cart-count-3">0</span>)</button>
+    </div>
   </header>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you!</p>
-    <ul>
-      <li>Email: support@megamart.com</li>
-      <li>Phone: +123 456 7890</li>
-      <li>Address: 123 MegaMart Ave, Shopping City</li>
-    </ul>
-    <form>
-      <input type="text" placeholder="Your Name" required><br><br>
-      <input type="email" placeholder="Your Email" required><br><br>
-      <textarea placeholder="Your Message" required></textarea><br><br>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  <main class="section container">
+    <h1>Contact</h1>
+    <p>Want this store for your business? Tell me about your project and I will build it.</p>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 MegaMart Online. All rights reserved.</p>
+    <form class="contact-form" onsubmit="alert('Demo: form sending is not enabled'); return false;">
+      <label><input type="text" placeholder="Your name" required></label>
+      <label><input type="email" placeholder="Your email" required></label>
+      <label><textarea placeholder="Message" required></textarea></label>
+      <button class="btn primary" type="submit">Send message</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 MegaMart Online</div>
+    </div>
   </footer>
+
+  <script>
+    // small cart open handler for contact page
+    const cartOpenBtn = document.getElementById('cart-open-3');
+    cartOpenBtn && cartOpenBtn.addEventListener('click', ()=> {
+      const drawer = document.getElementById('cart-drawer') || document.getElementById('cart-drawer-2');
+      const overlay = document.getElementById('overlay') || document.getElementById('overlay-2');
+      if(drawer) drawer.classList.add('open');
+      if(overlay) overlay.classList.add('visible');
+    });
+  </script>
 </body>
 </html>

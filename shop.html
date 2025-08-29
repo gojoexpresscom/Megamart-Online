@@ -1,78 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - MegaMart Online</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MegaMart — Shop</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>MegaMart Online</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">M</span>egaMart</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="cart-btn" id="cart-open-2">Cart (<span id="cart-count-2">0</span>)</button>
+    </div>
   </header>
 
-  <!-- Shop Section -->
-  <section id="products">
-    <h2>Shop Our Products</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="https://via.placeholder.com/300x300?text=Cool+Shoes" alt="Cool Shoes">
-        <h3>Cool Shoes</h3>
-        <p>$49.99</p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x300?text=Smart+Watch" alt="Smart Watch">
-        <h3>Smart Watch</h3>
-        <p>$99.99</p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x300?text=Headphones" alt="Headphones">
-        <h3>Headphones</h3>
-        <p>$29.99</p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x300?text=Fancy+Jacket" alt="Fancy Jacket">
-        <h3>Fancy Jacket</h3>
-        <p>$79.99</p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x300?text=Backpack" alt="Backpack">
-        <h3>Backpack</h3>
-        <p>$39.99</p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/300x300?text=Headphones+Pro" alt="Headphones Pro">
-        <h3>Headphones Pro</h3>
-        <p>$129.99</p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-    </div>
-    <p>Cart: <span id="cart-count">0</span> items</p>
-  </section>
+  <main class="section container">
+    <h1 class="section-title">Shop All Products</h1>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 MegaMart Online. All rights reserved.</p>
+    <div class="products-grid">
+      <!-- repeat cards -->
+      <article class="card product">
+        <div class="media"><img src="https://images.unsplash.com/photo-1600180758895-1b0628f9e7de?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="card-body">
+          <h3>Cool Shoes</h3>
+          <p class="price">$49.99</p>
+          <div class="card-actions">
+            <button class="btn small" onclick="addToCart('Cool Shoes')">Add to cart</button>
+            <a class="link" href="#">Quick view</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product">
+        <div class="media"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="card-body">
+          <h3>Smart Watch</h3>
+          <p class="price">$99.99</p>
+          <div class="card-actions">
+            <button class="btn small" onclick="addToCart('Smart Watch')">Add to cart</button>
+            <a class="link" href="#">Quick view</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product">
+        <div class="media"><img src="https://images.unsplash.com/photo-1580894732444-df7f6f2e3b30?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="card-body">
+          <h3>Headphones</h3>
+          <p class="price">$29.99</p>
+          <div class="card-actions">
+            <button class="btn small" onclick="addToCart('Headphones')">Add to cart</button>
+            <a class="link" href="#">Quick view</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product">
+        <div class="media"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="card-body">
+          <h3>Fancy Jacket</h3>
+          <p class="price">$79.99</p>
+          <div class="card-actions">
+            <button class="btn small" onclick="addToCart('Fancy Jacket')">Add to cart</button>
+            <a class="link" href="#">Quick view</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product">
+        <div class="media"><img src="https://images.unsplash.com/photo-1616628186189-d3f7db78a271?auto=format&fit=crop&w=900&q=80" alt=""></div>
+        <div class="card-body">
+          <h3>Backpack</h3>
+          <p class="price">$39.99</p>
+          <div class="card-actions">
+            <button class="btn small" onclick="addToCart('Backpack')">Add to cart</button>
+            <a class="link" href="#">Quick view</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 MegaMart Online</div>
+    </div>
   </footer>
 
+  <!-- Cart drawer (reused) -->
+  <aside id="cart-drawer-2" class="cart-drawer">
+    <header>
+      <strong>Your cart</strong>
+      <button id="cart-close-2" class="close">×</button>
+    </header>
+    <div class="cart-body" id="cart-items-2">
+      <p class="empty">Cart is empty.</p>
+    </div>
+    <footer class="cart-footer">
+      <div class="total">Total: <span id="cart-total-2">$0.00</span></div>
+      <button class="btn primary full">Checkout (demo)</button>
+    </footer>
+  </aside>
+  <div id="overlay-2" class="overlay"></div>
+
   <script>
-    let count = 0;
-    function addToCart() {
-      count++;
-      document.getElementById('cart-count').innerText = count;
+    // reuse same small cart logic but keep counts in sync
+    function addToCart(name){
+      // if page-level cartCount exists use global from index; else create a local fallback
+      if(typeof window.cartCount === 'undefined') window.cartCount = 0;
+      window.cartCount++;
+      // update both counters if present
+      const a = document.getElementById('cart-count');
+      const b = document.getElementById('cart-count-2');
+      if(a) a.innerText = window.cartCount;
+      if(b) b.innerText = window.cartCount;
+
+      // add item to drawer on this page
+      const list = document.getElementById('cart-items-2') || document.getElementById('cart-items');
+      if(list){
+        const empty = list.querySelector('.empty');
+        if(empty) empty.remove();
+        const row = document.createElement('div');
+        row.className = 'cart-row';
+        row.innerHTML = '<div class="item-name">'+name+'</div><div class="item-price">$' + (Math.floor(Math.random()*90)+10) + '.00</div>';
+        list.appendChild(row);
+        // open drawer
+        const drawer = document.getElementById('cart-drawer-2') || document.getElementById('cart-drawer');
+        const overlay = document.getElementById('overlay-2') || document.getElementById('overlay');
+        if(drawer) drawer.classList.add('open');
+        if(overlay) overlay.classList.add('visible');
+      }
     }
+
+    // open/close handlers for this page
+    const cartOpenBtn = document.getElementById('cart-open-2');
+    const cartCloseBtn = document.getElementById('cart-close-2');
+    const drawer = document.getElementById('cart-drawer-2');
+    const overlay = document.getElementById('overlay-2');
+
+    if(cartOpenBtn){ cartOpenBtn.addEventListener('click', ()=>{ drawer.classList.add('open'); overlay.classList.add('visible');}); }
+    if(cartCloseBtn){ cartCloseBtn.addEventListener('click', ()=>{ drawer.classList.remove('open'); overlay.classList.remove('visible');}); }
+    if(overlay){ overlay.addEventListener('click', ()=>{ drawer.classList.remove('open'); overlay.classList.remove('visible');}); }
   </script>
 </body>
 </html>
