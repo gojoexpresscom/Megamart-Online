@@ -1,180 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MegaMart — Premium Demo Store</title>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MegaMart Online</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html"><span class="logo-mark">M</span>egaMart</a>
-
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <button class="cart-btn" id="cart-open">Cart (<span id="cart-count">0</span>)</button>
-    </div>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <h1 class="logo">MegaMart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-left">
-        <h1>Premium products. Modern design.</h1>
-        <p class="lead">Discover curated items for your lifestyle — stylish, practical, and ready to ship.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="shop.html">Shop Bestsellers</a>
-          <a class="btn ghost" href="#featured">See Featured</a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <img class="hero-device" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Hero product">
-      </div>
+    <div class="hero-text">
+      <h1>Shop the Best Products at MegaMart!</h1>
+      <p>Discover amazing deals on electronics, fashion, and more.</p>
+      <a href="shop.html" class="btn">Shop Now</a>
     </div>
+    <img src="https://via.placeholder.com/1200x400" alt="MegaMart Hero Image" class="hero-img">
   </section>
 
-  <!-- Featured products -->
-  <section id="featured" class="section container">
-    <h2 class="section-title">Featured products</h2>
-    <p class="section-sub">Hand-picked bestsellers to boost your store conversions.</p>
-
-    <div class="grid products-grid">
-      <!-- product 1 -->
-      <article class="card product">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1600180758895-1b0628f9e7de?auto=format&fit=crop&w=800&q=80" alt="Cool Shoes">
-        </div>
-        <div class="card-body">
-          <h3>Cool Shoes</h3>
-          <p class="price">$49.99</p>
-          <div class="card-actions">
-            <button class="btn small" onclick="addToCart('Cool Shoes')">Add to cart</button>
-            <a href="shop.html" class="link">View</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- product 2 -->
-      <article class="card product">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Smart Watch">
-        </div>
-        <div class="card-body">
-          <h3>Smart Watch</h3>
-          <p class="price">$99.99</p>
-          <div class="card-actions">
-            <button class="btn small" onclick="addToCart('Smart Watch')">Add to cart</button>
-            <a href="shop.html" class="link">View</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- product 3 -->
-      <article class="card product">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1580894732444-df7f6f2e3b30?auto=format&fit=crop&w=800&q=80" alt="Headphones">
-        </div>
-        <div class="card-body">
-          <h3>Headphones</h3>
-          <p class="price">$29.99</p>
-          <div class="card-actions">
-            <button class="btn small" onclick="addToCart('Headphones')">Add to cart</button>
-            <a href="shop.html" class="link">View</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Why choose -->
-  <section class="section bg-light">
-    <div class="container grid two-col">
-      <div>
-        <h2>Designed to convert</h2>
-        <p>Fast-loading pages, clear product hierarchy, and persuasive CTAs — everything tuned to increase buyer confidence.</p>
+  <!-- Featured Products Preview -->
+  <section class="products-preview">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Cool Shoes">
+        <h3>Cool Shoes</h3>
+        <p>$49.99</p>
+        <a href="shop.html" class="btn">Buy Now</a>
       </div>
-      <div>
-        <ul class="features">
-          <li>Responsive desktop & mobile</li>
-          <li>SEO-friendly structure</li>
-          <li>Easy to customize in HTML/CSS</li>
-        </ul>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>$99.99</p>
+        <a href="shop.html" class="btn">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>$29.99</p>
+        <a href="shop.html" class="btn">Buy Now</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© 2025 MegaMart Online</div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
+  <footer class="footer">
+    <p>&copy; 2025 MegaMart Online. All rights reserved.</p>
   </footer>
-
-  <!-- Cart drawer -->
-  <aside id="cart-drawer" class="cart-drawer">
-    <header>
-      <strong>Your cart</strong>
-      <button id="cart-close" class="close">×</button>
-    </header>
-    <div class="cart-body" id="cart-items">
-      <p class="empty">Cart is empty.</p>
-    </div>
-    <footer class="cart-footer">
-      <div class="total">Total: <span id="cart-total">$0.00</span></div>
-      <button class="btn primary full">Checkout (demo)</button>
-    </footer>
-  </aside>
-
-  <div id="overlay" class="overlay"></div>
-
-  <script>
-    // Cart logic (small demo)
-    let cartCount = 0;
-    let total = 0;
-    function addToCart(name){
-      cartCount++;
-      document.getElementById('cart-count').innerText = cartCount;
-      // Add item to cart drawer
-      const list = document.getElementById('cart-items');
-      const empty = list.querySelector('.empty');
-      if(empty) empty.remove();
-      const row = document.createElement('div');
-      row.className = 'cart-row';
-      row.innerHTML = '<div class="item-name">'+name+'</div><div class="item-price">$' + (Math.floor(Math.random()*90)+10) + '.00</div>';
-      list.appendChild(row);
-      // open drawer
-      openCart();
-    }
-
-    // Drawer open/close
-    const cartOpen = document.getElementById('cart-open');
-    const cartClose = document.getElementById('cart-close');
-    const drawer = document.getElementById('cart-drawer');
-    const overlay = document.getElementById('overlay');
-
-    function openCart(){ drawer.classList.add('open'); overlay.classList.add('visible'); }
-    function closeCart(){ drawer.classList.remove('open'); overlay.classList.remove('visible'); }
-
-    cartOpen.addEventListener('click', openCart);
-    cartClose.addEventListener('click', closeCart);
-    overlay.addEventListener('click', closeCart);
-  </script>
 </body>
 </html>
